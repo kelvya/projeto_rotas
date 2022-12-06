@@ -5,10 +5,15 @@
     <router-link :to="rotaContato">Contato</router-link>
   </nav>
   <router-view/>
+  <hr/>
+  <OptionAPI/>
 </template>
 
 <script>
+import OptionAPI from './components/OptionAPI.vue'
 export default{
+  name: 'App',
+  components: { OptionAPI },
   data(){
     return{
       rotaContato:{name: 'contato'}
