@@ -2,11 +2,13 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link :to="rotaContato">Contato</router-link>
+    <router-link :to="rotaContato">Contato</router-link> |
+    <router-link to="/sobremesas">Sobremesas</router-link>
+    
   </nav>
   <router-view/>
-  <hr/>
-  <OptionAPI/>
+  <!-- <hr/> -->
+  <!-- <OptionAPI/> -->
 </template>
 
 <script>
