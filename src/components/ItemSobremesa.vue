@@ -5,15 +5,25 @@
         <!-- <p>{{item}}</p> -->
         <!-- <p>{{ produtos.pratosQuentes[0].nome }}</p> -->
         <div class="box_produto"></div>
-        <div v-for="sobremesa in produtos.sobremesas" :key="sobremesa">{{sobremesa.nome}} - R${{sobremesa.preco}},00</div>
+        <div v-for="sobremesa in lojaSobremesas" :key="sobremesa">{{sobremesa.nome}} - R${{sobremesa.preco}},00</div>
     </div>
 </template>
 
 <script>
 export default {
     computed:{
-        produtos(){
-            return this.$store.state.produtos
+        // produtos(){
+        //     return this.$store.state.produtos
+        // },
+        lojaSobremesas(){
+            return this.$store.getters.lojaSobremesas
+            // let lojaSobremesas = this.$store.state.produtos.sobremesas.map(
+            //     item => { return{
+            //         nome: item.nome,
+            //         preco: item.preco
+            //     }
+            // })
+            // return lojaSobremesas
         }
     }
 }

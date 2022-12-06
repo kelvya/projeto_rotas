@@ -1,16 +1,11 @@
 <template>
-    <ItemSobremesa :itemProduto="produtos"/>
+    <ItemSobremesa />
 </template>
 
 <script>
 import ItemSobremesa from '@/components/ItemSobremesa.vue'
 
 export default{
-    data(){
-        return{
-            
-        }
-    },
     name: 'SobremesasView',
     components: {
         ItemSobremesa
