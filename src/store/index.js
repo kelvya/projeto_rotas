@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 
 export default createStore({
+  strict: true,
   state: {
     produtos: {
                 pratosQuentes: [
@@ -20,19 +21,28 @@ export default createStore({
             },
   },
   getters: {
-    lojaSobremesas: state =>{
-      let lojaSobremesas = state.produtos.sobremesas.map(
-                item => { return{
+    loja: (state) => tipo => {
+      let loja = state.produtos[tipo].map(
+                (item) => { return{
                     nome: item.nome,
                     preco: item.preco
                 }
             })
-            return lojaSobremesas
+            return loja
     }
   },
   mutations: {
+    aplicaDesconto: (state, payload) =>{
+      state.produtos[payload].forEach(
+        (item) =>{
+          item.preco = (item.preco *0.9).toFixed(2)
+      })      
+    },
   },
   actions: {
+    aplicaDesconto: (context, payload) =>{
+      context.commit('aplicaDesconto', payload)            
+    },
   },
   modules: {
   }

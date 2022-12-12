@@ -3,6 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link :to="rotaContato">Contato</router-link> |
+    <router-link to="/PratosQuentes">Pratos Quentes</router-link> |
     <router-link to="/sobremesas">Sobremesas</router-link>
     
   </nav>

@@ -6,14 +6,14 @@
 import ItemProduto from '@/components/ItemProduto.vue';
 
 export default{
-    data () {
-        return{
-            categoria: 'sobremesas'
+    data() {
+        return {
+            categoria: 'pratosQuentes'
         }
     },
     name: 'SobremesasView',
     components: {
-    ItemProduto
-}
+    ItemProduto,
+},
 }
 </script>
